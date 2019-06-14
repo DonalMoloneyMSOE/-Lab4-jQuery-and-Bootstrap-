@@ -1,0 +1,70 @@
+<!--
+Donal Moloney
+Lab 4
+Web Application and Development
+Dr. Hornick
+12/21/17
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <!-- needed for Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Donal Moloney</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.0/Chart.min.js"></script>
+    <script src="./CoinFlipData.js" type="text/javascript"></script>
+    <script src="./CoinFlipCharter.js" type="text/javascript"></script>
+    <script>
+        new CoinFlipCharter(); // this starts it running...
+    </script>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="container">
+        <div class="jumbotron">
+            <h1  class="page-header">Execution Times</h1>
+            <p class="text-danger">Lab 4 Dr. Hornick</p>
+        </div>
+        <br>
+    </div>
+
+    <div>
+        <canvas id="chart1" width="1000" height="400">No canvas support!</canvas>
+    </div>
+
+    <form role="form">
+        <div class="form-group">
+            <label class="text-danger" id="searchFilterExpression" for="filter">&nbsp Search filter expresssion: &nbsp</label>
+            <input id="inputBox" type="text" class="form-control" id="filter">
+        </div>
+        <label class="text-danger" id="filterByTitle">&nbsp Filter By: &nbsp</label>
+        <br>
+        <div class="btn-group">
+            <label class="btn btn-info"><input type="radio" name="selector" value="name" checked>&nbsp Name &nbsp &nbsp</label>
+            <label class="btn btn-info"><input type="radio" name="selector" value="time">&nbsp Time &nbsp&nbsp</label>
+            <label class="btn btn-info"><input type="radio" name="selector" value="ip">&nbsp IP &nbsp&nbsp</label>
+            <label class="btn btn-info"><input type="radio" name="selector" value="sessionid">&nbsp Session &nbsp&nbsp</label>
+        </div>
+        <input id="update" class="btn btn-success" type="button" value="Apply/Update">
+    </form>
+    <br><br>
+    <label class="text-danger" id="tableHeader">&nbsp Table Data: &nbsp</label>
+    <br>
+    <div>
+        <table class="table table-striped" style="color:black" id="table1">
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
